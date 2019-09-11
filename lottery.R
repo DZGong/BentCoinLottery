@@ -10,16 +10,19 @@
 library(stats)
 
 # Small edit! from class 1!
+count=100 #How many times lottery
+len=10 #How long is the binery lottery
+probability=0.1 #The probability of getting 1
 
-arr <- array(0,10)
-for (i in 1:10){
-  arr[i] <- if (runif(1) < 0.1) 1 else 0
+lottery_ticket <- array(0,len)
+for (i in 1:len){
+  lottery_ticket[i] <- if (runif(1) < probability) 1 else 0
 }
 
-for (j in 1:100){
-  arr <- array(0,10)
-  for (i in 1:10){
-    arr[i] <- if (runif(1) < 0.1) 1 else 0
+for (j in 1:count){
+  lottery_ticket <- array(0,len)
+  for (i in 1:len){
+    lottery_ticket[i] <- if (runif(1) < probability) 1 else 0
   }
-  print(arr)
+  print(lottery_ticket)
 }
