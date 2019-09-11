@@ -13,12 +13,12 @@ library(stats)
 count=100 #How many times lottery
 len=10 #How long is the binery lottery
 probability=0.1 #The probability of getting 1
-
+#one ticket
 lottery_ticket <- array(0,len)
 for (i in 1:len){
   lottery_ticket[i] <- if (runif(1) < probability) 1 else 0
 }
-
+#100 tickets
 for (j in 1:count){
   lottery_ticket <- array(0,len)
   for (i in 1:len){
@@ -26,3 +26,4 @@ for (j in 1:count){
   }
   print(lottery_ticket)
 }
+
